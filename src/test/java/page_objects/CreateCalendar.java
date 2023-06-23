@@ -88,19 +88,19 @@ public class CreateCalendar extends BasePage{
         selectElementByText(usersDropdown, user);
     }
 
-    public void enterMeetingLocation() {
+    public void enterMeetingLocation(String location) {
         waitForElement(meetingLocation, 10);
-        meetingLocation.sendKeys("Pune");
+        meetingLocation.sendKeys(location);
     }
 
-    public void enterCalendarName() {
+    public void enterCalendarName(String cName) {
         waitForElement(calendarName, 10);
-        calendarName.sendKeys("abc");
+        calendarName.sendKeys();
     }
 
-    public void enterCalendarSlug() {
+    public void enterCalendarSlug(String slug) {
         waitForElement(calendarSlug, 10);
-        calendarSlug.sendKeys("abc");
+        calendarSlug.sendKeys(slug);
     }
 
     public void clickTeamAndEventSetupSaveAndContinueButton() {

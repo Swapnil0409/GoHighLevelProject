@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import page_objects.Calendars;
 import page_objects.CreateCalendar;
 import page_objects.MainPage;
+import utils.RandomGenerator;
 
 public class AddNewCalendarFunctionality {
 
@@ -64,9 +65,9 @@ public class AddNewCalendarFunctionality {
         createCalendar.clickSelectUserDropDown();
         String user = " Test User 1 ";
         createCalendar.selectUserFromDropDown(user);
-        createCalendar.enterMeetingLocation();
-        createCalendar.enterCalendarName();
-        createCalendar.enterCalendarSlug();
+        createCalendar.enterMeetingLocation(RandomGenerator.randomString(4));
+        createCalendar.enterCalendarName(RandomGenerator.randomString(4));
+        createCalendar.enterCalendarSlug(RandomGenerator.randomString(5));
         createCalendar.clickTeamAndEventSetupSaveAndContinueButton();
         createCalendar.clickAvailabilitySaveAndContinueButton();
         createCalendar.clickCompleteButton();
